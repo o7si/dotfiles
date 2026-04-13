@@ -109,8 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# dotfiles
-
 # curstom scripts
 export PATH="$HOME/.custom_scripts:$PATH"
 
@@ -118,22 +116,7 @@ export PATH="$HOME/.custom_scripts:$PATH"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # proxy
-export PROXY_PORT=7897
-
-function proxy_on() {
-  export http_proxy="http://127.0.0.1:$PROXY_PORT"
-  export https_proxy="http://127.0.0.1:$PROXY_PORT"
-  export ALL_PROXY="socks5://127.0.0.1:$PROXY_PORT"
-}
-
-function proxy_off() {
-  unset http_proxy
-  unset https_proxy
-  unset ALL_PROXY
-}
-
-alias pon="proxy_on"
-alias poff="proxy_off"
+[ -f "$HOME/.shell/proxy.sh" ] && source "$HOME/.shell/proxy.sh"
 
 # calc
 _calc() {
