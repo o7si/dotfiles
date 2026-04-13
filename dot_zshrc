@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # dotfiles
 
 # curstom scripts
-export PATH="/Users/o7si/.custom_scripts:$PATH"
+export PATH="$HOME/.custom_scripts:$PATH"
 
 # homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -152,9 +152,6 @@ alias i="fastfetch"
 # java
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
-# flutter
-export PATH="/Users/o7si/fvm/default/bin:$PATH"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -177,7 +174,7 @@ unset __conda_setup
 
 
 # OneCLI
-export PATH="/Users/o7si/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # eza
 alias tree="eza --tree"
