@@ -119,11 +119,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 [ -f "$HOME/.shell/proxy.sh" ] && source "$HOME/.shell/proxy.sh"
 
 # calc
-_calc() {
-  python3 -c "from math import *; print(eval('$*'))"
-}
-
-alias c='noglob _calc'
+[ -f "$HOME/.shell/calu.sh" ] && source "$HOME/.shell/calu.sh"
 
 # vim/nvim
 alias vim="nvim"
